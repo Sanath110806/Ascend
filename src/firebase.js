@@ -3,17 +3,17 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, collection, doc, setDoc, getDoc, getDocs, query, where, deleteDoc, serverTimestamp } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBuEPuREKUzRz17jtC3a0i7hFdqzYp0pHQ",
-  authDomain: "ascend-6767.firebaseapp.com",
-  projectId: "ascend-6767",
-  storageBucket: "ascend-6767.firebasestorage.app",
-  messagingSenderId: "90195386486",
-  appId: "1:90195386486:web:9daa9eab7b9c1175b27f57",
-  measurementId: "G-XWQD1ZP3SB"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// YouTube Data API Key - Replace with your own key from Google Cloud Console
-export const YOUTUBE_API_KEY = "AIzaSyDtsDXm0UiAJG-xifW5TUytRq4Lh63fibM";
+// YouTube Data API Key
+export const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

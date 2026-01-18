@@ -88,7 +88,9 @@ npm run dev
 
 ### Environment Setup
 
-Update `src/firebase.js` with your Firebase config and YouTube API key.
+1. Copy `.env.example` to `.env`
+2. Fill in your Firebase config and YouTube API key
+3. For Vercel deployment, add the same variables in Project Settings > Environment Variables
 
 ## Firestore Collections
 
