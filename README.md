@@ -1,16 +1,107 @@
-# React + Vite
+# Ascend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern learning platform for students and teachers.
 
-Currently, two official plugins are available:
+![Ascend](public/favicon.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## React Compiler
+**[https://ascend-learning-five.vercel.app](https://ascend-learning-five.vercel.app)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### For Students
+- Add YouTube playlists as personal courses
+- Track video progress with completion checkboxes
+- Take notes per video with auto-save
+- View learning activity heatmap
+- Join teacher classrooms
+- Receive notifications for new assignments
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### For Teachers
+- Create and manage classrooms
+- Post announcements
+- Upload assignments with due dates
+- Add reference notes for students
+- View enrolled student list
+
+## Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Frontend | React 18, Vite |
+| Styling | Vanilla CSS |
+| Backend | Firebase |
+| Auth | Firebase Authentication (Google OAuth) |
+| Database | Cloud Firestore |
+| API | YouTube Data API v3 |
+| Hosting | Vercel |
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── ActivityHeatmap.jsx
+│   ├── AddPlaylist.jsx
+│   ├── Navbar.jsx
+│   ├── NotificationBell.jsx
+│   ├── StudentNotes.jsx
+│   ├── TeacherPanel.jsx
+│   └── ...
+├── pages/
+│   ├── Login.jsx
+│   ├── Dashboard.jsx
+│   ├── Courses.jsx
+│   ├── MyCoursePlayer.jsx
+│   ├── Classrooms.jsx
+│   ├── ClassroomDetail.jsx
+│   ├── Profile.jsx
+│   └── Settings.jsx
+├── firebase.js
+├── App.jsx
+└── index.css
+```
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Firebase project
+- YouTube Data API key
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Sanath110806/Ascend.git
+
+# Navigate to directory
+cd Ascend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Environment Setup
+
+Update `src/firebase.js` with your Firebase config and YouTube API key.
+
+## Firestore Collections
+
+| Collection | Purpose |
+|------------|---------|
+| users | User profiles and roles |
+| classrooms | Teacher classrooms |
+| studentCourses | YouTube playlist courses |
+| videoProgress | Video completion tracking |
+| studentNotes | Per-video notes |
+| activityLogs | Daily learning activity |
+| notifications | User notifications |
+
+## License
+
+MIT
